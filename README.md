@@ -62,3 +62,7 @@ This opens the Streamlit app in your browser. **Strategies** lists every strateg
 ```
 
 To regenerate the golden snapshots after an intended change, run `UPDATE_GOLDEN=1 pytest tests/test_golden.py`, then review the diff.
+
+## License
+
+MIT; see `LICENSE`. Backtest results are not investment advice.
