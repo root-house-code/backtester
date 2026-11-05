@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtester"
+version = "0.1.0"
+description = "Deterministic daily-bar backtesting engine"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "pyarrow>=14",
+    "yfinance>=0.2.40",
+    "exchange_calendars>=4.5",
+    "pytest>=8",  # runs strategies' own fixture tests during validation
+    "pyyaml>=6",  # feed.yaml files
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.40"]
+dev = ["streamlit>=1.40"]
+
+[project.scripts]
+backtest = "backtester.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["backtester*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: needs network access to fetch real market data",
+]
+addopts = "-m 'not slow'"
+filterwarnings = [
+    # Raised inside exchange_calendars, not this package.
+    "ignore:Series.values returning an ndarray:DeprecationWarning:exchange_calendars",
+    "ignore::pandas.errors.Pandas4Warning:pandas.core.series",
+    # Raised inside yfinance.
+    "ignore::pandas.errors.Pandas4Warning:yfinance",
+]

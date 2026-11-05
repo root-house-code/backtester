@@ -1,0 +1,86 @@
+{
+  "confidence": {
+    "mean_trade_return": {
+      "ci_high": 0.5786034078,
+      "ci_low": -0.5255668608,
+      "level": 0.95,
+      "mean": 0.07182830864,
+      "n": 3,
+      "resamples": 10000
+    }
+  },
+  "data_quality": {
+    "signals_skipped_no_data": 0,
+    "signals_total": 3,
+    "skip_rate": 0.0
+  },
+  "exposure": {
+    "avg_pct_invested": 0.9984674826,
+    "turnover": 0.1015988974
+  },
+  "period": {
+    "end": "2019-12-31",
+    "sessions": 1258,
+    "start": "2015-01-02"
+  },
+  "returns": {
+    "alpha": -0.02333925044,
+    "benchmark_cagr": 0.09576557182,
+    "benchmark_total_return": 0.5786034078,
+    "beta": 0.4205995882,
+    "cagr": 0.01397713059,
+    "excess_cagr": -0.08178844124,
+    "excess_return": -0.5068547279,
+    "final_equity": 107174.868,
+    "total_return": 0.07174867989
+  },
+  "risk": {
+    "calmar": 0.06791385453,
+    "max_drawdown": -0.2058067634,
+    "max_drawdown_duration_sessions": 229,
+    "max_drawdown_peak": "2019-02-04",
+    "max_drawdown_recovery": null,
+    "max_drawdown_trough": "2019-10-11",
+    "sharpe": 0.188467985,
+    "sortino": 0.2694723316,
+    "volatility": 0.1003367032
+  },
+  "trades": {
+    "avg_loss": -0.5255668608,
+    "avg_loss_pnl": -17487.71316,
+    "avg_sessions_held": 1257.0,
+    "avg_win": 0.3705258934,
+    "avg_win_pnl": 12331.29057,
+    "closed": 0,
+    "count": 3,
+    "expectancy": 0.07182830864,
+    "expectancy_pnl": 2391.622663,
+    "open_at_end": 3,
+    "profit_factor": 1.410280517,
+    "total_commission": 0.0,
+    "win_rate": 0.6666666667
+  },
+  "trades_digest": [
+    [
+      "SPY",
+      "2015-01-02",
+      "open",
+      "536.0",
+      "open"
+    ],
+    [
+      "QQQ",
+      "2015-01-02",
+      "open",
+      "398.0",
+      "open"
+    ],
+    [
+      "TLT",
+      "2015-01-02",
+      "open",
+      "264.0",
+      "open"
+    ]
+  ]
+}

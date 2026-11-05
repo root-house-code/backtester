@@ -1,0 +1,11 @@
+# Sample event feed: made-up buy signals, to show how a file feed works.
+# Replace signals.csv with your own data, or copy this folder for a new feed.
+kind: event
+description: Sample buy signals with a score (made-up data for the example strategy)
+ticker_column: symbol
+time_column: published_at
+timezone: America/New_York   # published_at values have no UTC offset
+default_time: "18:00"        # date-only values count as published after the close
+columns:
+  score: float
+  note: str

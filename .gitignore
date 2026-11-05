@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+data/cache/
+runs/
+
+# Your own strategies, research logs and plug-in feeds stay on this machine.
+# Only the reference examples (used by the tests and the authoring kit) are tracked.
+strategies/*
+!strategies/buy_and_hold.py
+!strategies/momentum_rotation.py
+!strategies/test_momentum_rotation.py
+!strategies/event_hold.py
+!strategies/test_event_hold.py
+feeds/*
